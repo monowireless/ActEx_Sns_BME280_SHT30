@@ -186,15 +186,23 @@ q: PAL_MAG
 
 本解説では TWELITE R または R2 と TWELITE DIP を利用します。受信機側は MONOSTICK を利用します。
 
-1. アプリケーションを書き換え(上述参照)てください。
-   1. センサーを接続する子機には本Actを書き込みます。
-   2. 親機には [App_Wings](https://mono-wireless.com/jp/products/TWE-APPS/App_Wings/) を書き込んでおきます。TWELITE STAGE では[TWELITE APPSビルド&書換]にあります。
-2. ハードウェア結線を行います。
+※ MONOSTICK の替わりに TWELITE R/R2 + TWELITE DIP の組み合わせでも、同じように親機として利用できます。
 
+### 書き込み確認時の運用
+1. 親機側 (MONOSTICK) の書き込み(App_Wings)と設定 (アプリケーションID `1234abcd`、チャネル `13`) を行い、動作させておいてください。<br />
+  [App_Wings](https://mono-wireless.com/jp/products/TWE-APPS/App_Wings/) を書き込んでおきます。TWELITE STAGE では[TWELITE APPSビルド&書換]にあります。
+2. 子機側のハードウェアの結線を行い、十分確認してください。
+3. 子機側を TWELITE R(2) に接続してください。<br />
+  TWELITE STAGE でデバイス名(8桁の英数字, COM?ではない)が表示されない場合は、すぐに USB バスから切り離し、子機の電源をカットしてください。適切な接続ではなく過電流が流れるなど問題が出ている可能性があります。
+4. TWELITE STAGE から本アクトを選択し、書き込みを行ってください。<br />
+  書き込みが正常終了したらそのまま子機側をリセットし動作が開始します。
 
-※ TWELITE PAL + PAL センサーボードに接続することもできますが、設定（後述）が必要になります。
+※ TWELITE R(2) が接続したまま、子機側で配線の変更はTWELITEモジュールの電源ON/OFFを行うと、PC側のシリアルポートの接続が外れる場合があります。TWELITE STAGEを終了し TWELITE R(2) を抜き差しするといった作業が必要になる場合があります。
 
-※ MONOSTICK は TWELITE R/R2 + TWELITE DIP も利用できます。
+### 通常の運用
+1. 親機(App_Wings など)は稼働状態にしておきます。
+2. 子機側はTWELITE R(2)は接続しない結線に変更し、電源（電池）を投入します。
+
 
 
 ### 使用するピン
